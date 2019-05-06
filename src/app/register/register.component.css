@@ -1,0 +1,16 @@
+.m-2{
+    margin-top: 2rem;
+}
+label{
+    margin-bottom: 1rem;
+    font-family: cursive;
+    font-size: 16px;
+}
+input{
+    padding: 2rem 0rem;
+    font-family: cursive;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(243, 106, 106);
+}
