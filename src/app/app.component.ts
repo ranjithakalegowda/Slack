@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AuthService } from './core/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
 
-  items: Observable<any[]>; 
+  constructor(private authSevice : AuthService){}
 
-  constructor(db:AngularFirestore){
-    this.items= db.collection('items').valueChanges();
-  }
+  
 
 }

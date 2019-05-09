@@ -1,29 +1,8 @@
 <div class="container">
   <div class="row m-2">
       <div class="col-md-12 col-sm-12 col-xs12">
-          <form (ngSubmit) = 'onSubmit()' #f='ngForm'>
+          <form (ngSubmit) ='onSubmit(f)' #f='ngForm'>
               <div id="user-data">
-                  <div class="form-group">
-                      <label for="username">Name</label>
-                      <input type="text" 
-                      id="name" name="name" 
-                      class="form-control"
-                      placeholder="name"
-                       ngModel
-                       required
-                       >
-                  </div>
-            
-                  <div class="form-group">
-                      <label for="phone">Phone</label>
-                      <input type="number"
-                       id="phone" 
-                       name="phone" 
-                       class="form-control"
-                       placeholder="phone"
-                       ngModel
-                       required>
-                  </div>
             
                   <div class="form-group">
                       <label for="email">Email</label>
@@ -32,26 +11,23 @@
                       class="form-control"
                       placeholder="email"
                       ngModel
-                      required
-                      #email='ngModel'>
-                      <span class="help-block" 
-                      *ngIf="!email.valid && email.touched"
-                      >Please enter valid email</span>
+                      
+                      >
                   </div>
             
                   <div class="form-group">
                       <label for="password">Password</label>
                       <input type="password" 
-                      id="pwd" name="pwd"
+                      id="pwd" name="password"
                       class="form-control"
                       placeholder="password"
                       ngModel
-                      required>
+                      >
                   </div>
             
                   <button class="btn btn-primary" 
                   type="submit"
-                  [disabled]='!f.valid'>Register</button>
+                >Signup</button>
               </div>
       
           </form>

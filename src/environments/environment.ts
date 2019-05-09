@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase : {
+    firebase : {
     apiKey: "AIzaSyARpKxFoOgXqfyvSDVX1bppZc4mkMX7jRs",
     authDomain: "slack-e932f.firebaseapp.com",
     databaseURL: "https://slack-e932f.firebaseio.com",
