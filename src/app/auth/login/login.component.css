@@ -1,0 +1,43 @@
+.m-2{
+    margin-top: 2rem;
+}
+
+label{
+    margin-bottom: 1rem;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    padding:1rem;
+    font-family: cursive;
+    font-family: cursive;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(243, 106, 106);
+}
+.wrapper{
+    max-width: 500px;
+    margin: 0 auto;
+    background: #e6e6fa73;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-family: cursive;
+}
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.changes{
+    background-color: #9E9E9E;
+    color: #ffffff;
+}

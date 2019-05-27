@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { AngularFirestore } from 'angularfire2/firestore';
+import {switchMap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,22 +15,21 @@ export class AuthService {
 
   user: Observable<firebase.User>;
 
-  constructor(private af: AngularFireAuth, private router : Router) {
-    // af.authState.subscribe((auth) => {
-    //   this.user = auth;
-    // });
-
-    this.user = af.authState;
+  constructor(private af: AngularFireAuth, 
+    private afs : AngularFirestore,
+    private router : Router) {
+      this.user = this.af.authState.pipe(
+        switchMap(user =>{
+          if(user){
+            return this.afs.doc<any>(`users/${user.uid}`).valueChanges();
+          }
+          else{
+            return of(null);
+          }
+        })
+      )
+    // this.user = af.authState;
   }
-
-  // registerUser(email: string, password: string) {
-  //   this.af.auth.createUserWithEmailAndPassword(..)
-  // }
-
-  // loginUser(email: string, password: string) {
-  //   this.af.auth.signInWithEmailAndPassword(...);
-  // }
-
    async signup(email:string, password:string){
    await this.af
     .auth
@@ -69,7 +70,7 @@ export class AuthService {
 
   logout(){
     this.af.auth.signOut().then(() =>{
-      this.router.navigate(['']);
+      this.router.navigate(['users']);
     })
     
   }
@@ -77,18 +78,4 @@ export class AuthService {
   isAuthenticated(){
     return this.token != null;
   }
-
-//  login(email:string, password:string){
-//  try{
-//   const result =  this.af.auth.signInWithEmailAndPassword(email, password);
-//   if(result){
-//     console.log(result);
-//     this.router.navigate(['/home']);
-//   }
-//  } 
-//   catch(err){
-//     console.log('something went wrong:' , err.message);
-//     }
-//   }
-
 }

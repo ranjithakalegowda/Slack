@@ -1,0 +1,19 @@
+p, h1, h2, h3, h4, h5, h6, span {
+    color: white;
+}
+.menudown{
+    margin-left: 1rem;
+}
+.bell-icon{
+    margin-left: 7rem;
+}
+.wrapper{
+    padding: 15px;
+}
+.title{
+    font-size: 17px;
+    font-weight: bold;
+}
+.user{
+    opacity: 0.6;
+}

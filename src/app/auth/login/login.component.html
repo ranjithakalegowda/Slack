@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row m-2">
+      <div class="col-md-12 col-sm-12 col-xs12">
+        <div class="wrapper">
+            <form (ngSubmit) ='onSignin(f)' #f='ngForm'>
+                <div id="user-data">
+                  <H3 class="heading">Log In</H3>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email"
+                         id="email" name="email"
+                        class="form-control"
+                        placeholder="email"
+                        ngModel                       
+                        >
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" 
+                        id="pwd" name="password"
+                        class="form-control"
+                        placeholder="password"
+                        ngModel
+                        >
+                    </div>
+              
+                    <button class="btn btn-primary" 
+                    type="submit" style="background: #204d74"
+                  >Login</button>
+                  <button class="btn btn-default changes" (click)='register()' > Register</button>
+                </div>
+        
+            </form>
+        </div>
+
+        </div>
+  </div>
+  
+</div>

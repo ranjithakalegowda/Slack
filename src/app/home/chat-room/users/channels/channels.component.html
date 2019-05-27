@@ -1,0 +1,76 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <h5 style="color: white;">Channels
+        <a><span class="glyphicon glyphicon-plus plus-icon" data-toggle="modal" data-target="#myModal"
+            style="margin-left: 9rem"></span></a>
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" *ngFor="let channel of data">
+      <p> <span><i class="fa fa-hashtag"></i></span>{{channel.name}} </p>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-container">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title">Create a channel</h1>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Channels are where your members communicate.
+            They're best when organized around a topic - #leads, for example.</p>
+          <div class="toggle-container">
+              <button class="toggle-btn">Public</button> <span class="toggle-handle"></span> 
+          </div>
+          <div>
+            <div class="channel-title">
+              <label for="name">Name</label>
+              <div class="title-input-container">
+                <i class="fa fa-hashtag channel-icon"></i>
+                <input type="text" placeholder="e.g. leads">
+                <span class="modal-input-note">
+                  Names must be lowercase, without spaces or periods, and shorter than 22 characters.
+                </span>
+              </div>
+            </div>
+            <div class="channel-title">
+                <label for="name">Purpose (optional)</label>
+                <div class="title-input-container">
+                    <input type="text">
+                    <span class="modal-input-note">
+                      What's this channel about?
+                    </span>
+                </div>
+              </div>
+            <div class="channel-title">
+              <label for="name">Send invites to : (optional)</label>
+              <div class="title-input-container">
+                <input type="text" placeholder="Search by name">
+                <span class="modal-input-note">
+                  Select upto 1000 people to add to this channel
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button>Cancel</button>
+          <button>Create  Channel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

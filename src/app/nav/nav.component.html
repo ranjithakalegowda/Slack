@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <ul>
+          <li *ngFor="let item of items | async">
+            {{item.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div id="mySidebar" class="sidebar">
+    <ul>
+      <li><a href="login" routerLink="login" routerLinkActive="active">Login</a></li>
+      <li><a href="register" routerLink="register" routerLinkActive="active">Register</a></li>
+      <li><a style="cursor:pointer" (click)="onLogout()" ></a></li>
+    </ul>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" (click)="toggelSideBar()">☰</button>
+  
+  </div>
+  

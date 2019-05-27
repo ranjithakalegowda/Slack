@@ -1,0 +1,55 @@
+.wrapper {
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.search-input{
+    padding-left: 40px;
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid silver;   
+}
+.search-icon{
+    position: absolute;
+    top: 22px;
+    left: 130px;
+    padding: 0px !important;
+}
+.space-style span {
+    padding: 10px;
+}
+.changes span{
+    border-right: 1px solid silver;
+    padding: 0 10px;
+}
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.modal{
+    padding: 12px !important;
+}
+.modal-dialog{
+    float: right;
+    width: 400px;
+    margin-top: 13.2rem;    
+}
+
+.modal-dialog :focus {
+    outline: none !important;
+}
+
+@media(max-width : 1100px){
+    .search-input{
+        width: 150px;
+    }
+    .search-icon{
+        left: 80px;
+    }
+    .space-style span {
+        padding: 0px;
+    }
+}
