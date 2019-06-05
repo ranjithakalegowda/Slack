@@ -4,15 +4,6 @@
 
 export const environment = {
   production: false,
-    firebase : {
-    apiKey: "AIzaSyARpKxFoOgXqfyvSDVX1bppZc4mkMX7jRs",
-    authDomain: "slack-e932f.firebaseapp.com",
-    databaseURL: "https://slack-e932f.firebaseio.com",
-    projectId: "slack-e932f",
-    storageBucket: "slack-e932f.appspot.com",
-    messagingSenderId: "488133859748",
-    appId: "1:488133859748:web:ac7f5d9b363569a0"
-  },
 };
 
 /*
